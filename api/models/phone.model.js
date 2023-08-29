@@ -5,8 +5,12 @@ module.exports = (sequelize, Sequelize) => {
             autoIncrement: true,
             primaryKey: true,
         },
-        // DEFINE YOUR MODEL HERE
+        name: {
+            type: Sequelize.STRING,
+            number: Sequelize.STRING,
+            contactId: Sequelize.INTEGER,
+            foreignKey: true
+        }
     });
-  
     return Phone;
 };

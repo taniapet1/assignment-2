@@ -1,11 +1,15 @@
 module.exports = (sequelize, Sequelize) => {
     const Contact = sequelize.define("contact", {
         id: {
+            allowNull:false,
             type: Sequelize.INTEGER,
             autoIncrement: true,
-            primaryKey: true,
+            primaryKey: true
         },
-        // DEFINE YOUR MODEL HERE
+        name: {
+            allowNull:false,
+            type: String
+        }
     });
   
     return Contact;

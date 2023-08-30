@@ -17,7 +17,7 @@ exports.create = (req, res) => { => {
 };
 
 
-// Get all contacts   Lab8 task controller.js
+// Get all contacts  
 exports.findAll = (req, res) => {
     Contacts.findAll()
     .then(data => {
@@ -32,20 +32,30 @@ exports.findAll = (req, res) => {
 
 
 // Get one contact by id
-exports.findOne = (req, res) => {
-    Contacts.findOne()
-    .then(data => {
-        res.send(data);
-    })
-    .catch(err => {
-        res.status(500).send({
-            message: err.message || "An error has occurred"
+exports.getOne = (req, res) => {
+        const id = req.params.id;
+    
+        Phone.findOne({
+            where: { id: id }
+        })
+        .then(num => {
+            if (num == 1) {
+                res.send({
+                    message: "Phone number was deleted successfully!"
+                });
+            } else {
+                res.send({
+                    message: `Cannot delete number`
+                });
+            }
+        })
+        .catch(err => {
+            res.status(500).send({
+                message: "Could not delete Task with id=" + id
+            });
         });
-    });
-};
-
-  
-};
+    };
+    
 
 // Update one contact by id
 exports.update = (req, res) => {
@@ -74,13 +84,27 @@ exports.update = (req, res) => {
 
 // Delete one contact by id
 exports.delete = (req, res) => {
-    Contacts.delete()
-    .then(data => {
-        res.send(data);
-    })
-    .catch(err => {
-        res.status(500).send({
-            message: err.message || "An error has occurred"
+    exports.delete = (req, res) => {
+        const id = req.params.id;
+    
+        Contact.destroy({
+            where: { id: id }
+        })
+        .then(num => {
+            if (num == 1) {
+                res.send({
+                    message: "Phone number was deleted successfully!"
+                });
+            } else {
+                res.send({
+                    message: `Cannot delete number`
+                });
+            }
+        })
+        .catch(err => {
+            res.status(500).send({
+                message: "Could not delete Task with id=" + id
+            });
         });
-    });
-};
+    };
+    

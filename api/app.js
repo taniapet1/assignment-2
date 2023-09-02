@@ -22,7 +22,39 @@ app.use(express.urlencoded({ extended: true }));
 
 // simple route
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to bezkoder application." });
+  res.json({ message: "This returns a list of all the contacts." });
+});
+
+app.get("/:contactId/phones", (req, res) => {
+  res.json({ message: "These are the numbers for the contact"." });
+});
+
+app.put("/", (req, res) => {
+  res.json({ message: "This is how you create a new contact." });
+});
+
+app.delete("/:contactId", (req, res) => {
+  res.json({ message: "This deletes a contact." });
+});
+
+app.put("/:contactId", (req, res) => {
+  res.json({ message: "This updates attributes for a contact." });
+});
+
+app.post("/:contactId/Phone", (req, res) => {
+  res.json({ message: "This updates the phone number for a contact". });
+});
+
+app.get("/:contactId/phone/phoneId", (req, res) => {
+  res.json({ message: "This returns a phone ID." });
+});
+
+app.delete("/:contactId/phone/:phoneId", (req, res) => {
+  res.json({ message: "This deletes a phone numbers ID." });
+});
+
+app.put("/:contactId/phones/:phoneId", (req, res) => {
+  res.json({ message: "This updates the attributes of a particular phone number." });
 });
 
 require("./routes/contacts.routes")(app);

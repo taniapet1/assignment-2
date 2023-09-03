@@ -4,7 +4,7 @@ const Phones = db.phones;
 const Op = db.Sequelize.Op;
 
 // Create contact
-exports.create = (req, res) => { => {
+exports.create = (req, res) => {
     Contact.create()
     .then(data => {
         res.send(data);
@@ -107,4 +107,4 @@ exports.delete = (req, res) => {
             });
         });
     };
-    
+};  

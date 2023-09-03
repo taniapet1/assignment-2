@@ -1,0 +1,99 @@
+App {
+    font-family: Arial;
+    }
+
+input {
+    padding: 5px;
+    margin-left: 735px;
+    width: 350px;
+    border-radius: 8px;
+    border:1px solid gray;
+    }
+      
+.button {
+        height:40px;
+        width:150px;
+        padding: 5px 10px;
+        background-color: #279423;
+        color: #fff;
+        border: green;
+        cursor: pointer;
+        margin-left: 570px;
+        border-radius: 8px;
+        font-family: Arial;
+      }
+      
+.button:hover {
+      background-color: green;
+      }
+
+.delbut {
+    height:25px;
+    width:80px;
+    margin-left: 325px;
+    color: white;
+    background-color: #E74C3C;
+    border-radius: 8px;
+    margin-top: 3px;
+    font-family: Arial, sans-serif;
+}
+
+.delbut:hover {
+    background-color: #FF0000;
+    }
+
+ul {
+     margin-left: 400px;
+     }
+  
+li {
+    margin: 5px;
+    font-family: Arial;
+  }
+
+.head {
+        text-align: center; 
+        justify-content: center;
+        font-family: Arial;
+        }
+
+fieldset {
+    margin-left: 370px;
+    margin-top: 30px;
+    height: 30px;
+    width: 500px;
+    border-radius: 8px;
+    border:1px solid black;
+    }    
+
+.phone {
+    width: 240px;
+    margin-left: 652px;
+}    
+
+.details {
+    margin-left : -180px;
+    padding: 10px;
+    
+}
+.high {
+    margin-left: 270px;
+}
+
+.low {
+    margin: 10px 0;
+}
+
+.bar {
+    margin-left: 460px;
+}
+
+
+    
+
+  
+
+
+
+
+

@@ -31,7 +31,7 @@ services:
   db:
     image: postgres:15.3-alpine3.18
     ports:
-      - 5432:5432
+      - 1000:1000
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
